@@ -23,7 +23,7 @@ class MyWindow(Gtk.Window):
         # set base window background color
         self.modify_bg(Gtk.StateType.NORMAL, Gdk.color_parse("#000000"))
         # set default window size
-        self.set_default_size(640, 480)
+        self.set_default_size(320, 240)
         # set window position
         self.set_position(Gtk.WindowPosition.CENTER)
 
@@ -66,6 +66,7 @@ class MyWindow(Gtk.Window):
 
     # function to update display
     def updateDisplay(self):
+        self.timeUpdateInterval()
         self.updateTime()
         self.updateDate()
 
@@ -108,11 +109,10 @@ class MyWindow(Gtk.Window):
         nextUpdateInterval = 60 - int(timeSecond)
         if nextUpdateInterval == 0:
             nextUpdateInterval = 60
-        GLib.timeout_add_seconds(nextUpdateInterval, self.updateTime)
+        GLib.timeout_add_seconds(nextUpdateInterval, self.updateDisplay)
         
     def updateTime(self):
         self.lblTime.set_text(time.strftime("%H:%M", self.fetchTime()))
-        self.timeUpdateInterval()
 
     def updateDate(self):
         self.lblDate.set_text(time.strftime("%A, %d. %b %Y", self.fetchTime()))
