@@ -1,5 +1,5 @@
 # Digital clock
-## Python digital clock application
+## Python digital clock gui application
 
 **Hardware:**
 - Raspberry Pi
@@ -9,7 +9,5 @@
 - Raspberry Pi OS
 - Python 2.7.16
 - PyGObject
-
-## Digital clock in full screen mode.
 
 F11 - exit or enter full screen mode
