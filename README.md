@@ -8,5 +8,8 @@
 **Software:**
 - Raspberry Pi OS
 - Python 2.7.16
+- PyGObject
 
-Basic digital clock application.
+## Digital clock in full screen mode.
+
+F11 - exit or enter full screen mode
