@@ -1,5 +1,5 @@
-#Digital clock
-### Python digital clock application
+# Digital clock
+## Python digital clock application
 
 **Hardware:**
 - Raspberry Pi
