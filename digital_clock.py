@@ -99,10 +99,12 @@ class MyWindow(Gtk.Window):
         else:
             pass
 
+    # function to fetch current time
     def fetchTime(self):
         currentTime=time.localtime()
         return currentTime
 
+    # function to calculate update interal
     def timeUpdateInterval(self):
         currentTime = self.fetchTime()
         timeSecond = time.strftime("%S", currentTime)
@@ -110,10 +112,12 @@ class MyWindow(Gtk.Window):
         if nextUpdateInterval == 0:
             nextUpdateInterval = 60
         GLib.timeout_add_seconds(nextUpdateInterval, self.updateDisplay)
-        
+
+    # function to updaet time label
     def updateTime(self):
         self.lblTime.set_text(time.strftime("%H:%M", self.fetchTime()))
 
+    # function to update date label
     def updateDate(self):
         self.lblDate.set_text(time.strftime("%A, %d. %b %Y", self.fetchTime()))
 
