@@ -2,7 +2,7 @@
 ## Python digital clock gui application for Raspberry Pi
 
 **Hardware:**
-- Raspberry Pi
+- Raspberry Pi 2
 - Waveshare 5" LCD
 
 **Software:**
