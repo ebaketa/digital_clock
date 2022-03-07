@@ -41,8 +41,8 @@ class MyWindow(Gtk.Window):
         # wrapper.modify_bg(Gtk.StateType.NORMAL, Gdk.color_parse("#222222"))
         wrapper.set_margin_top(5)
         wrapper.set_margin_bottom(5)
-        wrapper.set_margin_left(5)
-        wrapper.set_margin_right(5)
+        wrapper.set_margin_start(5)
+        wrapper.set_margin_end(5)
         self.add(wrapper)
 
         # time label
@@ -55,8 +55,8 @@ class MyWindow(Gtk.Window):
         # date label
         self.lblDate = Gtk.Label()
         self.lblDate.set_alignment(0.5, 0)
-        self.lblDate.set_margin_left(5)
-        self.lblDate.set_margin_right(5)
+        self.lblDate.set_margin_start(5)
+        self.lblDate.set_margin_end(5)
         self.lblDate.modify_font(Pango.FontDescription('24'));
         # self.lblDate.set_text("")
         wrapper.pack_start(self.lblDate, True, True, 0)
