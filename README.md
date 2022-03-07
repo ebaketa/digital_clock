@@ -7,7 +7,14 @@
 
 **Software:**
 - Raspberry Pi OS
-- Python 2.7.16
+- Python 2
 - PyGObject
+
+
+**Installing the system provided PyGObject:**
+- sudo apt install python3-gi python3-gi-cairo gir1.2-gtk-3.0
+
+**Installing from PyPI with pip:**
+- sudo apt install libgirepository1.0-dev gcc libcairo2-dev pkg-config python3-dev gir1.2-gtk-3.0
 
 F11 - exit or enter full screen mode
