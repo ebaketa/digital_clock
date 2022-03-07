@@ -1,8 +1,11 @@
 #!/usr/bin/env python
+# -*- coding: utf-8 -*-
 
-# Python digital clock applications
-# Raspberry Pi OS
-# Python 2.7.16
+# Program:      Python digital clock applications
+# Author:       Elvis Baketa
+# Version:      0.2
+#               Python 3
+#               PyGObject
 
 import gi
 
