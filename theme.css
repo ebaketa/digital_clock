@@ -1,0 +1,20 @@
+#MyWindow {
+    background-color: black;
+    font-family: Sans;
+}
+label#lblTime {
+    background-color: black;
+    color: white;
+    font-family: sans-serif;
+    font-size: 96px;
+    border-radius: 5px;
+    margin: 5px 5px 5px 5px;
+}
+label#lblDate {
+    background-color: black;
+    color: white;
+    font-family: sans-serif;
+    font-size: 24px;
+    border-radius: 5px;
+    margin: 5px 5px 5px 5px;
+}

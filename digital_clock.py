@@ -23,8 +23,9 @@ class MyWindow(Gtk.Window):
         self.connect("delete-event", Gtk.main_quit)
         self.connect("key-press-event",self.on_key_press_event)
         self.connect("realize", self.on_realize)
+        self.set_name('MyWindow')
         # set base window background color
-        self.modify_bg(Gtk.StateType.NORMAL, Gdk.color_parse("#000000"))
+        # self.modify_bg(Gtk.StateType.NORMAL, Gdk.color_parse("#000000"))
         # set default window size
         self.set_default_size(320, 240)
         # set window position
@@ -47,17 +48,21 @@ class MyWindow(Gtk.Window):
 
         # time label
         self.lblTime = Gtk.Label()
-        self.lblTime.set_alignment(0.5, 1)
-        self.lblTime.modify_font(Pango.FontDescription('96'));
+        self.lblTime.set_name("lblTime")
+        self.lblTime.set_halign(0)
+        self.lblTime.set_valign(2)
+        # self.lblTime.modify_font(Pango.FontDescription('96'));
         # self.lblTime.set_text("")
         wrapper.pack_start(self.lblTime, True, True, 0)
 
         # date label
         self.lblDate = Gtk.Label()
-        self.lblDate.set_alignment(0.5, 0)
+        self.lblDate.set_name("lblDate")
+        self.lblDate.set_halign(0)
+        self.lblDate.set_valign(1)
         self.lblDate.set_margin_start(5)
         self.lblDate.set_margin_end(5)
-        self.lblDate.modify_font(Pango.FontDescription('24'));
+        # self.lblDate.modify_font(Pango.FontDescription('24'));
         # self.lblDate.set_text("")
         wrapper.pack_start(self.lblDate, True, True, 0)
 
@@ -132,6 +137,18 @@ class MyWindow(Gtk.Window):
             self.hideShowMousePointer()
         else:
             pass
+
+    def gtk_style():
+        style_provider = Gtk.CssProvider()
+        style_provider.load_from_path('theme.css')
+
+        Gtk.StyleContext.add_provider_for_screen(
+            Gdk.Screen.get_default(),
+            style_provider,
+            Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION
+        )
+
+    gtk_style()
 
 if __name__ == "__main__":
     win = MyWindow()
