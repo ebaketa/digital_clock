@@ -7,7 +7,7 @@
 
 **Software:**
 - Raspberry Pi OS
-- Python 2
+- Python3
 - PyGObject
 
 
