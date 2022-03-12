@@ -1,10 +1,11 @@
 #MyWindow {
     background-color: black;
+    color: white;
     font-family: Sans;
 }
 label#lblTime {
     background-color: black;
-    color: white;
+    color: blue;
     font-family: sans-serif;
     font-size: 96px;
     border-radius: 5px;
@@ -12,7 +13,7 @@ label#lblTime {
 }
 label#lblDate {
     background-color: black;
-    color: white;
+    color: blueviolet;
     font-family: sans-serif;
     font-size: 24px;
     border-radius: 5px;
